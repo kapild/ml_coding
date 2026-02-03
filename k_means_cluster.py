@@ -9,11 +9,20 @@ class Kmeans:
         self.clusters = None
 
     def fit(self, X_data ):
-        self.X_data = X_data
-        centroids = np.random.choice(self.X_data.shape[0], self.k, replace=False)
-        self.clusters = X_data[centroids]
+        # initialize cluster, k
+        choices = np.random.choice (X_data.shape[0], self.k, replace=False)
+        clusters = X_data[choices]
+        print (clusters)
+
 
     def predict(self, iterations=1000):
+        pass
+        # for number of iterations
+        # for all X
+        #   find distance with each cluster.
+        # assign to X_i to the latest cluster
+        # update the cluster to be the mean
+        # find loss
 
 if __name__ == "__main__":
     N, D = 100, 2
